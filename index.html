@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="4081326.webp">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="text-center mt-5 d-flex justify-content-center align-items-center title mx-auto">
+<h1>BookMarker</h1>
+</div>
+<div class="brdr w-75 mx-auto my-5">
+</div>
+<div class="d-flex justify-content-center align-items-center brief">
+    <span><i class="fa-solid fa-bookmark fa-2xl"></i></span>
+    <h2 class="h3">Bookmark your favorite sites</h2>
+    <span><i class="fa-solid fa-bookmark fa-2xl"></i></span>    
+</div>
+<div class="container w-75 mx-auto">
+    <label for="BookMarkName" class="d-flex align-items-center"><i class="fa-solid fa-floppy-disk fa-xl"></i><p class="fs-5 mt-3 ms-2">Site Name</p></label>
+    <input oninput="validateUrl(this)" type="text" class="form-control" placeholder="BookMark Name" id="BookMarkNameInput">
+   <div class="alert alert-danger mt-2 p-2 d-none">
+    Name should start with Capital character and max-length of name is 10 characters
+   </div>
+    <label for="Site URL" class="d-flex align-items-center"><i class="fa-solid fa-link fa-xl"></i></i><p class="fs-5 mt-3 ms-2">Site Name</p></label>
+    <input oninput="validateUrl(this)" type="text" class="form-control" placeholder="Site URL" id="SiteURLInput">
+    <div class="alert alert-danger mt-2 p-2 d-none">
+      Url should start with https/www.
+     </div>
+    <div class="d-flex justify-content-center"> <button onclick="submitUrl()" class="btn submit text-white mt-3 px-4">Submit</button></div>
+</div>
+<div class="brdr w-75 mx-auto my-5">
+</div>
+<div class="container w-75">
+<table class="table">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>Website Name</th>
+        <th>Visit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="demo">
+      <tr>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
