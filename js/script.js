@@ -25,25 +25,25 @@ function submitUrl(){
         alert("no data valid")
     }
     
-// clear()
+clear()
 }
-function display(){
+function display(arr){
     var cartona = "";
-    for(var i=0; i<inputs.length; i++){
+    for(var i=0; i<arr.length; i++){
         cartona+=
         `<tr>
         <th scope="row">${i+1}</th>
-        <td>${inputs[i].BookName}</td>
+        <td>${arr[i].BookName}</td>
         <td><button class="btn visit d-flex align-items-center justify-content-center py-0 "><i class="fa-solid fa-eye"></i><p class="mt-3 ms-3">Visit</p</button></td>
         <td><button onclick="deleteinput()" class="btn btn-danger d-flex align-items-center justify-content-center py-0"><i class="fa-solid fa-trash-can"></i><p class="mt-3 ms-3">Delete</p</button></td>
       </tr>`
     }
     document.getElementById("demo").innerHTML = cartona;
 }
-// function clear(){
-//     BookMarkNameInput.value = null;
-//     SiteURLInput.value = null;    
-// }
+function clear(){
+    BookMarkNameInput.value = null;
+    SiteURLInput.value = null;    
+}
 function deleteinput(deletedIndex){
     inputs.splice(deletedIndex,1);
     display(inputs);
